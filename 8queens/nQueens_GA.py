@@ -51,7 +51,7 @@ def solver(n, x, u):
         base = p if k == 0 else p_next
         # 1. Copy
         p_next.extend(random.sample(base, int((1 - x) * n)))
-        # 2. Crossover
+        # 2. Crossover 
         # there could be different parent selection strategies
         parents = stochastic_universal_sampling(base, int(x * n))
         # parents = roulette_wheel(base, int(x * n))
